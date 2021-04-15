@@ -37,37 +37,47 @@
 // {{< tabs >}}
 .book-tabs {
   margin-top: $padding-16;
-  margin-bottom: $padding-16;
-
-  border: $padding-1 solid $heather-gray;
-  border-radius: $border-radius;
+  // margin-bottom: $padding-16;
 
   overflow: hidden;
 
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
 
   label {
-    display: inline-block;
-    color: $jade;    
-    padding: $padding-8 $padding-16;
+    display: block;
+    color: #333;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.49px;    
+    padding: .2rem 0;
     border-bottom: $padding-1 transparent;
     cursor: pointer;
   }
 
   .book-tabs-content {
-    order: 999; //Move content blocks to the end
+    // order: 999; //Move content blocks to the end
     width: 100%;
     border-top: $padding-1 solid $gray-100;
-    padding: $padding-16;
-    display: none;
+    padding: $padding-16 0 1.99rem;
+    display: block;
+
+    figure {
+      margin-left: 0;
+      margin-top: 30px;
+    }
   }
 
-  input[type="radio"]:checked + label {
-    border-bottom: $padding-1 solid $jade;
+  input[type="radio"] + label {
+    border-top: $padding-1 solid #76B900;
+    border-bottom: $padding-1 solid #76B900;
   }
   input[type="radio"]:checked + label + .book-tabs-content {
     display: block;
+  }
+
+  .notices {
+    margin-bottom: 0 !important;
   }
 }
 

@@ -34,104 +34,38 @@
 <body class="docs-home">
   <main>
     <div id="site-nav" class="globalNav">
-      <div class="container-lg">
+      <div class="container">
         <nav class="navTopWrapper">
           <ul class="navTop">
             <li><a href="https://www.nvidia.com/" target="_blank"><img src={{"images/nvidia-logo.svg" | absURL }} /></a></li>
           </ul>
         </nav>
-        <nav>
-          <ul class="navRoot">
-            <li class="navSection logo">
-              <div class="rootLink"><a href="//docs.cumulusnetworks.com/"><span>Networking Docs</span></a></div>
-            </li>
-            <li class="navSection primary">
-              <a class="rootLink" href="//cumulusnetworks.com/">HOME</a>
-              <a class="rootLink" href="https://support.mellanox.com/s/contact-support-page">SUPPORT</a>
-              <a class="rootLink" href="//docs.cumulusnetworks.com/">DOCS</a>
-              <a class="rootLink" href="//education.cumulusnetworks.com/">EDUCATION</a>
-              <a class="rootLink" href="//cumulusnetworks.com/blog/">BLOG</a>
-              <a class="rootLink" href="//slack.cumulusnetworks.com/">COMMUNITY</a>
-            </li>
-            <li class="navSection mobile">
-              <div class="burger-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div class="mobileMenu">
-        <ul>
-          <li><a href="//cumulusnetworks.com/">HOME</a></li>
-          <li><a href="https://support.mellanox.com/s/contact-support-page">SUPPORT</a></li>
-          <li><a href="//docs.cumulusnetworks.com/">DOCS</a></li>
-          <li><a href="//education.cumulusnetworks.com/">EDUCATION</a></li>
-          <li><a href="//cumulusnetworks.com/blog/">BLOG</a></li>
-          <li><a href="//slack.cumulusnetworks.com/">COMMUNITY</a></li></ul>
       </div>
     </div>
-    <!-- <div id="site-nav">
-      <div class="header-wrapper flex">
-        <a href="/">
-          <img src="/header-logo.png" alt="Cumulus Networks">
-          <img src="/cumulus-networks-rt-white.svg" alt="Cumulus Networks" class="header-mobile">
-        <span>Docs</span>
-        </a>
-        <ul class="flex">
-          <li><a href="//cumulusnetworks.com/">HOME</a></li>
-          <li><a href="https://support.mellanox.com/s/contact-support-page">SUPPORT</a></li>
-          <li><a href="//docs.cumulusnetworks.com/">DOCS</a></li>
-          <li><a href="//education.cumulusnetworks.com/">EDUCATION</a></li>
-          <li><a href="//cumulusnetworks.com/blog/">BLOG</a></li>
-          <li><a href="//slack.cumulusnetworks.com/">COMMUNITY</a></li>
-        </ul>
-        <div class="burger-menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-    </div> -->
-    <header class="home-banner" style="background-image: url({{"docs-home-bg.jpg" | absURL}});">
+    <header class="home-banner">
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <h1>Documentation</h1>
+            <div class="with-border-bottom">
+              <h1>NVIDIA Documentation</h1>
+              <h3>Get Started</h3>
+            </div>
           </div>
         </div>
       </div>
     </header>
-    <section class="bg-athens-gray-white">
+    <section>
       <div class="container">
         <div class="row">
-          <div class="col-12 text-center">
-            <h3 class="header-fancy">
-              <span>Search the Docs</span>
-            </h3>
-          </div>
-          <div class="col-12 text-center pb-5">
-          <!--  <div class="resources-search"> -->
-          <!-- <input type="text" class="resources-search-input" placeholder="Search the documentation" value="">
-          <button type="submit">Search</button> -->
-
-          <script async src="https://cse.google.com/cse.js?cx=002929300794741444210:sy0sz3qlwdc"></script>
-          <div class="gcse-searchbox-only" enableAutoComplete="true" data-resultsUrl="/search/"></div>
-          <!-- </div> -->
-        </div>
-      </div>
-        <div class="row">
-          <div class="col-12 text-center">
+          <!-- <div class="col-12 text-center">
             <h3 class="header-fancy">
               <span>Read the Docs</span>
             </h3>
-          </div>
+          </div> -->
           <div class="col-12 col-sm-6 col-lg-4 mb-5 mb-lg-0">
             {{ range where .Site.Menus.subnav "Title" "NVIDIA Cumulus Linux" }}
-              <a href="{{.URL}}"><img src={{"home-products-cumulus-linux.jpg" | absURL }} alt="NVIDIA Cumulus Linux" class="mb-6"></a>
-              <h3>NVIDIA Cumulus Linux</h3>
+              <a href="{{.URL}}"><img src={{"home-products-cumulus-linux.jpg" | absURL }} alt="NVIDIA Cumulus Linux" class="mb-3"></a>
+              <h2>NVIDIA Cumulus Linux</h2>
               <p class="small">An open network operating system designed for efficiency, automation and scale</p>
               <ul>
                   <li><a href="{{.URL}}">User guide</a></li>
@@ -143,8 +77,8 @@
           </div>
           <div class="col-12 col-sm-6 col-lg-4 mb-5 mb-lg-0">
             {{ range where .Site.Menus.subnav "Title" "NVIDIA NetQ" }}
-              <a href="{{.URL}}"><img src={{"home-products-netq.jpg" | absURL }} alt="NVIDIA NetQ" class="mb-6"> </a>
-              <h3>NVIDIA NetQ</h3>
+              <a href="{{.URL}}"><img src={{"home-products-netq.jpg" | absURL }} alt="NVIDIA NetQ" class="mb-3"> </a>
+              <h2>NVIDIA NetQ</h2>
               <p class="small">A highly-scalable, modern network operations tool set that provides visibility into your network</p>
               <ul>
                   <li><a href="{{.URL}}">User guide</a></li>
@@ -154,8 +88,8 @@
             {{ end }}
           </div>
           <div class="col-12 col-sm-6 col-lg-4 mb-5 mb-lg-0">
-            <a href="/cumulus-vx/"><img src={{"home-products-cumulus-express.jpg" | absURL }} alt="Cumulus VX" class="mb-6"></a>
-            <h3>NVIDIA Cumulus VX</h3>
+            <a href="/cumulus-vx/"><img src={{"home-products-cumulus-express.jpg" | absURL }} alt="Cumulus VX" class="mb-3"></a>
+            <h2>NVIDIA Cumulus VX</h2>
             <p class="small">A free virtual appliance &mdash; download and build a virtual data center using any popular hypervisor</p>
             <ul>
               <li><a href="/cumulus-vx/">What is Cumulus VX?</a></li>
@@ -166,94 +100,8 @@
         </div>
       </div>
     </section>
-    <section class="bg-athens-gray-white pb-5">
-        <div class="container">
-          <div class="row">
-          <div class="col-12 text-center">
-            <h3 class="header-fancy">
-              <span>Additional Resources</span>
-            </h3>
-          </div>
-          <div class="col-12 mb-3">
-            <div class="card-deck four-across">
-              <div class="card">
-                <a href="https://cumulusnetworks.com/hcl/"></a>
-                <div class="card__background" style="background-image: url('{{"Tech-Doc-01-HCL.jpg" | absURL}}')"></div>
-                <div class="card__content">
-                  <h3>Hardware Compatibility List</h3>
-                  <p>See all the platforms that Cumulus Linux and Cumulus RMP support.</p>
-                  <span>View our HCL</span>
-                </div>
-              </div>
-              <div class="card">
-                <a href="/guides/"></a>
-                <div class="card__background" style="background-image: url('{{"Tech-Doc-02-Support.jpg" | absURL}}')"></div>
-                <div class="card__content">
-                  <h3>Technical Guides</h3>
-                  <p>Read long form technical guides that provide deep dives into various features.</p>
-                  <span>Read the guides</span>
-                </div>
-              </div>
-              <div class="card">
-                <a href="/knowledge-base/"></a>
-                <div class="card__background" style="background-image: url('{{"Tech-Doc-03-release-notes.jpg" | absURL}}')"></div>
-                <div class="card__content">
-                  <h3>Knowledge Base</h3>
-                  <p>Learn many troubleshooting tips and peruse various technical articles.</p>
-                  <span>View KB articles</span>
-                </div>
-              </div>
-              <div class="card">
-                <a href="/contributor-guide/"></a>
-                <div class="card__background" style="background-image: url('{{"Tech-Doc-04-Contribute.png" | absURL}}')"></div>
-                <div class="card__content">
-                  <h3>Contribute</h3>
-                  <p>Discover how to add or update content in the Cumulus Networks technical documentation.</p>
-                  <span>Learn More</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="pt-5 pb-5 mobile-center">
-        <div class="container">
-          <div class="row">
-            <div class="col-12 text-center">
-              <h3 class="header-fancy">
-                <span>Additional Products and Content</span>
-              </h3>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4">
-              <h3>Cumulus RMP</h3>
-              <ul>
-                <li><a href="/cumulus-rmp/">Overview</a></li>
-                <li><a href="/cumulus-rmp/Quick-Start-Guide/">Quick start guide</a></li>
-              </ul>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4">
-              <h3>Cumulus Linux PDF Archive</h3>
-              <ul>
-                <li><a href="/pdfs/#cumulus-linux-pdf-archive">Cumulus Linux PDFs</a></li>
-                <li><a href="/pdfs/#cumulus-chassis-pdf-archive">Cumulus Chassis PDF</a></li>
-              </ul>
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-4">
-            <h3>Cumulus NetQ PDF Archive</h3>
-            <ul>
-              <li><a href="/pdfs/#cumulus-netq-pdf-archive">Cumulus NetQ PDFs</a></li>
-            </ul>
-        </div>
-        </div>
-        </div>
-      </section>
-    <!-- <div class="book-home markdown">
-
-      {{ .Content }}
-    </div> -->
   </main>
-  <footer class="footer-top" style="margin-top: 0px;">
+  <!-- <footer class="footer-top" style="margin-top: 0px;">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -378,7 +226,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
   {{ template "_internal/google_analytics_async.html" . }}
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
@@ -420,30 +268,24 @@
        })();
    </script>
 
-   <script>
+   <!-- <script>
       var siteNav = document.getElementById('site-nav');
       var burgerMenu = document.querySelector('.burger-menu');
 
       burgerMenu.addEventListener('click', function() {
         siteNav.classList.toggle('menu-opened');
       });
-   </script>
+   </script> -->
 
-   <script>
+   <!-- <script>
     window.onload = function(){
       document.getElementById('gsc-i-id1').placeholder = 'Search the docs. For better results, include your version number in your query.';
     };
-   </script>
+   </script> -->
 
   <script>
     (function(w,d,s){var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=true;j.src='//embeddable-widgets-usw2.insided.com/cumulusnetworks-en.insided-conversational.js';f.parentNode.insertBefore(j,f);})(window,document,'script');
   </script>
-
-  <!-- Announcement bars -->
-  {{ $jsAnnouncementBar := resources.Get "js/announcement-bar.js" }}
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
-  <script src = "{{ $jsAnnouncementBar.Permalink }}"> </script>
-
 </body>
 
 </html>

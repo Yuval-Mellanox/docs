@@ -16,7 +16,7 @@ $(document).ready(function() {
 	      var span = document.createElement('span');
 		  	span.className = ('clipboard');
 		  	span.setAttribute('data-clipboard-text', anchorLink);
-		  	span.innerHTML = "<img src=\"https://icons.cumulusnetworks.com/01-Interface-Essential/27-Link-Unlink/hyperlink-circle.svg\" width=\"13\" height=\"13\">";
+		  	span.innerHTML = "<img src=\"/svg/hyperlink-circle.svg\" width=\"13\" height=\"13\">";
 
 			  // Append the html link to the current h2
 				elem.append(span);
@@ -111,9 +111,11 @@ $(document).ready(function() {
           anchor.classList.remove('active')
         }
       });
+
   		if (!e.target.parentNode.classList.contains('active')){
   			e.target.parentNode.classList.add('active'); 			
   		}
+			
   		var sbStatusClasses = ['default', 'hide-left', 'hide-right', 'hide-both'];
   		var mainTag = document.querySelector('main');
   		sbStatusClasses.forEach(function(classname) {

@@ -1,1 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="7px" height="10px" viewBox="0 0 7 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>arrow-right-1</title>
+    <g id="Nvidia-Docs" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Docs-Detail-//-Version-2" transform="translate(-18.000000, -406.000000)" stroke="#FFFFFF">
+            <g id="arrow-right-1" transform="translate(19.000000, 407.000000)">
+                <path d="M0.406875,7.69230769 L4.72414977,4.12008027 C4.76086327,4.08961338 4.781875,4.04590469 4.781875,4 C4.781875,3.95409531 4.76086327,3.91038662 4.72414977,3.87991973 L0.406875,0.307692308" id="Path"></path>
+            </g>
+        </g>
+    </g>
+</svg>

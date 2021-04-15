@@ -71,6 +71,25 @@ img {
 }
 
 //Menu Styles and Expand/Collapse
+aside .sidebar-logo {
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 300px;
+  position: relative;
+
+  .logo-bottom {
+    position: absolute;
+    bottom: 23px;
+    right: 23px;
+
+    img {
+      width: 81px;
+    }
+  }
+}
 aside nav ul {
   padding: 0;
   margin: 0;
@@ -81,7 +100,7 @@ aside nav ul {
   .expand{
     display: block;
     visibility: visible;
-    border-left: solid $jade;
+    border-left: solid #76b900;
     border-width: 1px;
     li>a{
       padding-left: 12px;
@@ -101,11 +120,11 @@ aside nav ul {
 
   }
   a:active{
-    color: $jade
+    color: #76b900;
   }
-  a:hover {
-    opacity: .5;
-  }
+  // a:hover {
+  //   opacity: .5;
+  // }
 
   ul {
     padding-left: 0;
@@ -155,7 +174,14 @@ ul.pagination {
     }
 
     a{
+      color: white;
       display: block;
+      font-size: 14px;
+      letter-spacing: 0.58px;
+
+      &.active {
+        color: #76B900;
+      }
     }
     .expand {
       .menuControl {
@@ -164,12 +190,11 @@ ul.pagination {
     }
   }
 
-  @include dark-links;
+  // @include dark-links;
 }
 
 .book-section-flat {
   margin-bottom: $padding-16 * 2;
-  bo
   > a, > span {
     font-weight: 600
   }
@@ -195,7 +220,7 @@ ul.pagination {
   border-left: 1px solid $mystic;
   flex: 0 0 $toc-width;
   font-size: $font-size-12;
-  background-color: $white ;
+  background-color: #414141 ;
   display: block;
   width: $toc-width;
   padding: $padding-16;
@@ -208,20 +233,20 @@ ul.pagination {
   nav {
     width: $toc-width;
     padding: $padding-16;
-    background-color: transparent;
+    background-color: #414141;
     // position: fixed;
     // top: 294px;
     // overflow-x: hidden;
     // overflow-y: scroll;
 
     a {
-      color: $rolling-stone;
+      color: #FFF;
       font-weight: 400;
       line-height: 22px;
     }
 
     >ul>li>a:first-of-type{
-      color: $jade;
+      color: white;
       font-weight: 600;
     }
   }
@@ -235,31 +260,35 @@ ul.pagination {
   }
 
   button {
-    background: none;
+    background: #76B900;
     border: 0;
-    font-size: 13px;
-    font-weight: 600;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    height: 69px;
+    letter-spacing: 0.67px;
     position: relative;
     top: 43px;
-    left: 7px;
-    padding: 0 8px 19px;
+    left: 0;
+    padding: 25px 23px;
     width: 100%;
     text-align: left;
+    text-transform: uppercase;
 
-    &:after {
-      content: '';
-      background-color: #e0e4ec;
-      display: block;
-      width: 169px;
-      height: 2px;
-      position: absolute;
-      bottom: -9px;
-    }
+    // &:after {
+    //   content: '';
+    //   background-color: #e0e4ec;
+    //   display: block;
+    //   width: 169px;
+    //   height: 2px;
+    //   position: absolute;
+    //   bottom: -9px;
+    // }
 
     img {
-      margin-right: 4px;
-      width: 19px;
-      height: 19px;
+      margin-right: 7px;
+      width: 22px;
+      height: 22px;
     }
   }
 }

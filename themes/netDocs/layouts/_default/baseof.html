@@ -13,16 +13,18 @@
 {{if ne .Page.Type "pdf"}}
   <input type="checkbox" style="display: none" id="menu-control" />
 
-  <!-- Green bar header -->
-  {{ partial "top-header" . }}
 <div class="docs-wrapper">
-  {{ partial "version-dropdown" . }}
-
-  {{ partial "mobile-dropdown" . }}
+ 
 
   <main class="container flex">
     <aside class="book-menu">
-
+      <div class="sidebar-logo">
+        <img src={{"cumulus-linux.svg" | absURL }} alt="Cumulus Linux">
+        <div class="logo-bottom">
+          <img src={{"images/nvidia-logo.svg" | absURL }} alt="Nvidia">
+        </div>
+      </div>
+      <!-- <img src={{"sidebar-logo.jpg" | absURL }} alt="Cumulus Linux"> -->
       <nav role="navigation">
         <h2 class="book-brand"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h2>
         <!-- branch to list.html or single.html -->
@@ -43,13 +45,23 @@
     </aside>
 {{ end }}
 
-<div class="book-page">
-  {{ block "main" . }}
-  {{ end }}
-</div>
+<div class="docs-content-wrapper">
+  <!-- Green bar header -->
+  {{ partial "top-header" . }}
 
-{{ block "toc" .}}
-{{ end }}
+  {{ partial "version-dropdown" . }}
+
+  {{ partial "mobile-dropdown" . }}
+  <div class="flex">
+    <div class="book-page">
+      {{ block "main" . }}
+      {{ end }}
+    </div>
+    
+    {{ block "toc" .}}
+    {{ end }}
+  </div>
+</div>
 
 </main>
 </div>
@@ -58,9 +70,9 @@
 {{ partialCached "footer" . }}
 
 <!-- Announcement bars -->
-{{ $jsAnnouncementBar := resources.Get "js/announcement-bar.js" }}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
-<script src = "{{ $jsAnnouncementBar.Permalink }}"> </script>
+<!-- {{ $jsAnnouncementBar := resources.Get "js/announcement-bar.js" }} -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script> -->
+<!-- <script src = "{{ $jsAnnouncementBar.Permalink }}"> </script> -->
 
 <!-- The following Javascript does not play well with PDF output tools -->
 

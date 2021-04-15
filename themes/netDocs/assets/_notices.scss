@@ -75,12 +75,12 @@ div.notices.tip > *:first-child:before{
   left: 5px;
   right: 10px;
 }
-div.notices.tip > *:first-child:after{
-  position: absolute;
-  top: 2px;
-  left: 2rem;
-  content: "Tip"
-}
+// div.notices.tip > *:first-child:after{
+//   position: absolute;
+//   top: 2px;
+//   left: 2rem;
+//   content: "Tip"
+// }
 
 //Note Notice Block
 div.notices.note {
